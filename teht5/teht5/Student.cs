@@ -13,40 +13,52 @@ namespace teht5
         public string StudentID { get; set; }
         public string Class { get; set; }
         public string Courses { get; set; }
-
-        // hbd
-
-        public void Hbd()
+        public string student_1 ()
         {
-            Age++;
+            Name = "Ella";
+            StudentID = "K1558";
+            Age = 20;
+            Class = "TTV15S1";
+            Courses = "Fysiikka";
+            return String.Format("Student's name: " + Name + " Age: " + Age + " Student-ID: " + StudentID + " Class: " + Class);
+
+        }
+        public string student_2 ()
+        {
+            Name = "Kalle";
+            StudentID = "K2323";
+            Age = 26;
+            Class = "TTV15S4";
+            Courses = "Tietoturvateknologiat";
+            return String.Format("Student's name: " + Name + " Age: " + Age + " Student-ID: " + StudentID + " Class: " + Class + ", Is taking courses: " +Courses);
+
         }
 
-        //dropping out 
-
-        public void Dropping()
+        public string student_3()
         {
-            Class = "Dropping out";
+            Name = "Juuso";
+            Age = 22;
+            Class = "TTV16S3";
+            StudentID = "K2222";
+            Courses = "Englanti";
+            return String.Format("Student's name: " + Name + " Age: " + Age + " Student-ID: " + StudentID + " Class: " + Class + ", Is taking courses: " + Courses);
+
         }
+
+        public string student_4()
+        {
+            Name = "Nimi";
+            Age = 0;
+            Class = "joku luokka";
+            StudentID = "joku id";
+            Courses = "joku kurssi";
+            return String.Format("Student's name: " + Name + " Age: " + Age + " Student-ID: " + StudentID + " Class: " + Class + ", Is taking courses: " + Courses);
+
+        }
+       
+
+
         
-        public void AddMatikka()
-        {
-            string str = Convert.ToString(Courses + ", Matematiikka");
-            Courses = str;
-            
-        }
-
-        public void AddOhjelmointi()
-        {
-            string s = Convert.ToString(Courses + ", Ohjelmointi");
-            Courses = s;
-        }
-
-
-        public void PrintData()
-        {
-            Console.WriteLine("Student's name: "+Name+ " Age: " +Age+ " Student-ID: "+StudentID+ " Class: " +Class);
-            Console.WriteLine("Student is taking classes: "+Courses);
-        }
 
     }
 }
